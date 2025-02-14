@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import { DarkTheme } from './Themes';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -34,7 +34,7 @@ img{
     height: auto;
 }
 `
-const Main =  styled.div`
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -53,39 +53,43 @@ const Main =  styled.div`
   top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+
+   max-height: 700px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    marginn-top : 10px;
+    padding: 16px;
+    text-align: justify;
 `
-
-
-
 
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
-<ParticleComponent theme='dark' />
+                <LogoComponent theme='dark' />
+                <SocialIcons theme='dark' />
+                <PowerButton />
+                <ParticleComponent theme='dark' />
 
-        <Spaceman>
-            <img src={astronaut} alt="spaceman" />
-        </Spaceman>    
-        <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-        </Main>
+                <Spaceman>
+                    <img src={astronaut} alt="spaceman" />
+                </Spaceman>
+                <Main>
+                        I’m a backend developer based in India, passionate about building efficient, scalable, and secure applications. Specializing in Laravel PHP, I love designing clean, robust architectures and APIs that power beautiful user experiences.
+                        <br /> <br />
+                        I’m deeply invested in exploring the backend stack, constantly trying new techniques, and refining my craft by working on impactful projects. As a freelancer and technology enthusiast, I also enjoy sharing knowledge through blogs and collaborating with like-minded professionals.
+                        <br /> <br />
+                        I believe coding is an art—it’s about precision, creativity, and purpose. Feel free to connect with me through my social links!
+                </Main>
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
+                <BigTitle text="ABOUT" top="10%" left="5%" />
 
 
-        </Box>
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 

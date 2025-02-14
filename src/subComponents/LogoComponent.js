@@ -19,7 +19,9 @@ z-index:3;
 const LogoComponent = (props) => {
     return (
         <Logo color={props.theme}>
-          MN
+          <a  href="/" class="text-decoration-none fw-bolder">
+            MN
+          </a>
         </Logo>
     )
 }
